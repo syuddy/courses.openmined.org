@@ -3,11 +3,11 @@ layout: post
 title:  "Welcome to Jekyll!"
 ---
 
-<p>
 {% for myfiles in site.static_files %}
+<p>
   {{ myfiles.path }}
-{% endfor %}
 </p>
+{% endfor %}
 
 <ul>
   {% for post in site.posts %}
