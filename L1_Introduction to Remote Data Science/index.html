@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Welcome to Jekyll!"
+---
+
+<p>
+{% for myfiles in site.static_files %}
+  {{ myfiles.path }}
+{% endfor %}
+</p>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
