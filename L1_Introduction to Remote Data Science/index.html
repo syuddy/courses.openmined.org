@@ -11,16 +11,16 @@ title:  "Index of currentDIR"
 <p>
 
 <ul style="list-style-type: none; margin-left: 1em;">
-    <li>
     {% for myfiles in site.static_files %}
-    <a href="{{ site.baseurl | append: myfiles.path }}">{{ myfiles.name }}</a>
-    {% endfor %}
+    <li>
+      <a href="{{ site.baseurl | append: myfiles.path }}">{{ myfiles.name }}</a>
     </li>
+    {% endfor %}
 </ul>
 
 <table>
   <tr align="left">
-     <th>pageinfo</th><th>{{}}</th>
+     <th colspan="2">pageinfo</th>
   </tr>
   <tr align="left">
      <th>page.name</th><td>{{ page.name }}</td>
