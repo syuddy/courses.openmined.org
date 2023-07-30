@@ -22,8 +22,9 @@ title:  "Index of currentDIR"
      </tr>
      <tr align="left">
       <th>{{ page.dir }}</th><td>{{ myfiles.path | url_decode contains page.dir }}</td>
-   </tr>
-</table>
+     </tr>
+      {% endfor %}
+    </table>
     {% endfor %}
 </ul>
 
