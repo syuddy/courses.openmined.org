@@ -15,12 +15,16 @@ title:  "fileslist navigater"
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   <p>
-    {{ post.permalink }}
-    {{ post.path }}
-    {{ post.relative_path }}
-    {{ post.url }}
-    {{ post.collection }}
-    {{ post.date }}
+    post.categories: {{ post.categories }}
+    post.dir: {{ post.dir }}
+    post.id: {{ post.id }}
+    post.post.permalink: {{ post.permalink }}
+    post.post.path: {{ post.path }}
+    post.post.name: {{ post.name }}
+    post.relative_path: {{ post.relative_path }}
+    post.url: {{ post.url }}
+    post.collection: {{ post.collection }}
+    post.date: {{ post.date }}
   </p>
   {% endfor %}
 </ul>
