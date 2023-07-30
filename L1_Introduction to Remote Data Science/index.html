@@ -6,14 +6,15 @@ title:  "Index of currentDIR"
     <li>
       <a href="{{ site.baseurl | append: page.dir }}">{{ page.dir | url_decode }}</a>
     </li>
-</ul>
 
-
+<li>
 {% for myfiles in site.static_files %}
 <p>
-  <a href="{{ site.baseurl | append: myfiles.path }}">{{ myfiles.path }}</a>
+  <a href="{{ site.baseurl | append: myfiles.path }}">{{ myfiles.name }}</a>
 </p>
 {% endfor %}
+</li>
+</ul>
 
 <table>
   <tr>
