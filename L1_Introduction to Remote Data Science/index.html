@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "folder list"
+title:  "fileslist navigater"
 ---
 
 {% for myfiles in site.static_files %}
@@ -10,7 +10,7 @@ title:  "folder list"
 {% endfor %}
 
 <ul>
-  {% for post in site.collections  %}
+  {% for post in site.collections.docs  %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
