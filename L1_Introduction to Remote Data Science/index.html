@@ -11,10 +11,12 @@ title:  "Index of currentDIR"
 <p>
 
 <ul style="list-style-type: none; margin-left: 1em;">
-    {% for myfiles in site.static_files | where "dir" , page.dir %}
+    {% for myfiles in site.static_files %}
+    {% if myfiles.dir contains page.dir %}
     <li>
       <a href="{{ site.baseurl | append: myfiles.path }}">{{ myfiles.name }}</a>
     </li>
+    {% endif %}
     {% endfor %}
 </ul>
 
