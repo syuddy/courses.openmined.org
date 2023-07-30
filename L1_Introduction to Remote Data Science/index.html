@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "folder list"
 ---
 
 {% for myfiles in site.static_files %}
@@ -14,5 +14,12 @@ title:  "Welcome to Jekyll!"
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
+  <p>
+    {{ post.path }}
+    {{ post.relative_path }}
+    {{ post.url }}
+    {{ post.collection }}
+    {{ post.date }}
+  </p>
   {% endfor %}
 </ul>
