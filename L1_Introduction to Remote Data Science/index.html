@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  "fileslist navigater"
+title:  "Index of currentDIR"
 ---
+
+{{ site.baseurl }}{{ page.dir | url_decode }}
 
 {% for myfiles in site.static_files %}
 <p>
@@ -9,7 +11,6 @@ title:  "fileslist navigater"
 </p>
 {% endfor %}
 
-{{ site.baseurl }}
 <ul>
   {% for post in site.pages  %}
     <li>
