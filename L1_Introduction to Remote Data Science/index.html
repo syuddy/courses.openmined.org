@@ -16,11 +16,12 @@ title:  "Index of currentDIR"
       <a href="{{ site.baseurl | append: myfiles.path }}">{{ myfiles.name }}</a>
     </li>
     <table>
+      {% for myprop in myfiles.keys %}
       <tr align="left">
-        <th>myfiles.path</th><td>{{ myfiles.keys }}</td>
+        <th>myfiles.{{myprop}}</th><td>{{ myfiles[{{myprop}}] }}</td>
      </tr>
      <tr align="left">
-      <th>{{ page.dir }}</th><td>{{ myfiles.path contains page.dir | url_decode }}</td>
+      <th>{{ page.dir }}</th><td>{{ myfiles.path | url_decode contains page.dir }}</td>
    </tr>
 </table>
     {% endfor %}
