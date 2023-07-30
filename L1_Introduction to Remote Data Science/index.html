@@ -2,8 +2,14 @@
 layout: post
 title:  "Index of currentDIR"
 ---
+<ul style="list-style-type: square">
+    <li>
+      <a href="{{ site.baseurl | append: page.dir }}">{{ page.dir | url_decode }}</a>
+    </li>
+</ul>
 
-{{ site.baseurl }}{{ page.dir | url_decode }}
+{{ site.baseurl | append: page.dir | url_decode }}
+
 
 {% for myfiles in site.static_files %}
 <p>
