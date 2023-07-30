@@ -18,10 +18,10 @@ title:  "Index of currentDIR"
     <table>
       {% for myprop in myfiles.keys %}
       <tr align="left">
-        <th>myfiles.{{myprop}}</th><td>{{ myfiles.[](myprop) }}</td>
+        <th>myfiles.{{myprop}}</th><td>{{ myfiles.invoke_drop(myprop) }}</td>
      </tr>
      <tr align="left">
-      <th>{{ page.dir }}</th><td>{{ myfiles.path | url_decode contains page.dir }}</td>
+      <th>{{ page.dir }}</th><td>{{ myfiles.path }}</td>
      </tr>
       {% endfor %}
     </table>
