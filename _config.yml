@@ -19,8 +19,8 @@
 sass:
 #   sass_dir: _sass
 collections:
-#   posts:
-#     output          : true
+   posts:
+     output          : true
 
 # Handling Reading
 safe                : false
