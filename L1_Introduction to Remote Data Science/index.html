@@ -18,7 +18,7 @@ title:  "Index of currentDIR"
     <table>
       {% for myprop in myfiles.keys %}
       <tr align="left">
-        <th>myfiles.{{myprop}}</th><td>{{ myfiles | map: {{myprop}} }}</td>
+        <th>myfiles.{{myprop}}</th><td>{{ myfiles | map: myprop }}</td>
      </tr>
      <tr align="left">
       <th>{{ page.dir }}</th><td>{{ myfiles.path | url_decode contains page.dir }}</td>
