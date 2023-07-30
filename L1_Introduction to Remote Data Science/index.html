@@ -15,6 +15,14 @@ title:  "Index of currentDIR"
     <li>
       <a href="{{ site.baseurl | append: myfiles.path }}">{{ myfiles.name }}</a>
     </li>
+    <table>
+      <tr align="left">
+        <th>myfiles.path</th><td>{{ myfiles }}</td>
+     </tr>
+     <tr align="left">
+      <th>{{ page.dir }}</th><td>{{ myfiles.path contains page.dir }}</td>
+   </tr>
+</table>
     {% endfor %}
 </ul>
 
