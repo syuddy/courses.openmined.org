@@ -8,31 +8,42 @@ title:  "Index of currentDIR"
     </li>
 </ul>
 
-{{ site.baseurl | append: page.dir | url_decode }}
-
 
 {% for myfiles in site.static_files %}
 <p>
-  {{ myfiles.path }}
+  <a href="{{ site.baseurl | append: myfiles.path }}">{{ myfiles.path }}</a>
 </p>
 {% endfor %}
 
-<ul>
-  {% for post in site.pages  %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  <p>
-    post.categories: {{ post.categories }} <hr/>
-    post.dir: {{ post.dir }} <hr/>
-    post.id: {{ post.id }} <hr/>
-    post.permalink: {{ post.permalink }} <hr/>
-    post.path: {{ post.path }} <hr/>
-    post.name: {{ post.name }} <hr/>
-    post.relative_path: {{ post.relative_path }} <hr/>
-    post.url: {{ post.url }} <hr/>
-    post.collection: {{ post.collection }} <hr/>
-    post.date: {{ post.date }} <hr/>
-  </p>
-  {% endfor %}
-</ul>
+<table>
+  <tr>
+     <th>pageinfo</th><th>{{}}</th>
+  </tr>
+  <tr>
+     <th>page.name</th><td>{{ page.name }}</td>
+  </tr>
+  <tr>
+    <th>page.dir</th><td>{{ page.dir }}</td>
+ </tr>
+ <tr>
+  <th>page.path</th><td>{{ page.path }}</td>
+</tr>
+<tr>
+  <th>page.relative_path</th><td>{{ page.relative_path }}</td>
+</tr>
+<tr>
+  <th>page.url</th><td>{{ page.url }}</td>
+</tr>
+<tr>
+  <th>page.id</th><td>{{ page.id }}</td>
+</tr>
+<tr>
+  <th>page.permalink</th><td>{{ page.permalink }}</td>
+</tr>
+<tr>
+  <th>page.categories</th><td>{{ page.categories }}</td>
+</tr>
+<tr>
+  <th>page.date</th><td>{{ page.date }}</td>
+</tr>
+</table>
