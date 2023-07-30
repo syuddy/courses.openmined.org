@@ -6,45 +6,47 @@ title:  "Index of currentDIR"
     <li>
       <a href="{{ site.baseurl | append: page.dir }}">{{ page.dir | url_decode }}</a>
     </li>
+</ul>
 
-<li>
-{% for myfiles in site.static_files %}
 <p>
-  <a href="{{ site.baseurl | append: myfiles.path }}">{{ myfiles.name }}</a>
-</p>
-{% endfor %}
-</li>
+
+<ul style="list-style-type: none; margin-left: 1em;">
+    <li>
+    {% for myfiles in site.static_files %}
+    <a href="{{ site.baseurl | append: myfiles.path }}">{{ myfiles.name }}</a>
+    {% endfor %}
+    </li>
 </ul>
 
 <table>
-  <tr>
+  <tr align="left">
      <th>pageinfo</th><th>{{}}</th>
   </tr>
-  <tr>
+  <tr align="left">
      <th>page.name</th><td>{{ page.name }}</td>
   </tr>
-  <tr>
+  <tr align="left">
     <th>page.dir</th><td>{{ page.dir }}</td>
  </tr>
- <tr>
+ <tr align="left">
   <th>page.path</th><td>{{ page.path }}</td>
 </tr>
-<tr>
+<tr align="left">
   <th>page.relative_path</th><td>{{ page.relative_path }}</td>
 </tr>
-<tr>
+<tr align="left">
   <th>page.url</th><td>{{ page.url }}</td>
 </tr>
-<tr>
+<tr align="left">
   <th>page.id</th><td>{{ page.id }}</td>
 </tr>
-<tr>
+<tr align="left">
   <th>page.permalink</th><td>{{ page.permalink }}</td>
 </tr>
-<tr>
+<tr align="left">
   <th>page.categories</th><td>{{ page.categories }}</td>
 </tr>
-<tr>
+<tr align="left">
   <th>page.date</th><td>{{ page.date }}</td>
 </tr>
 </table>
