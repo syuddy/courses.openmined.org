@@ -17,10 +17,10 @@ title:  "Index of currentDIR"
     </li>
     <table>
       <tr align="left">
-        <th>myfiles.path</th><td>{{ myfiles }}</td>
+        <th>myfiles.path</th><td>{{ myfiles.keys }}</td>
      </tr>
      <tr align="left">
-      <th>{{ page.dir }}</th><td>{{ myfiles.path contains page.dir }}</td>
+      <th>{{ page.dir }}</th><td>{{ myfiles.path contains page.dir | url_decode }}</td>
    </tr>
 </table>
     {% endfor %}
